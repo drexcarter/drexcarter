@@ -330,7 +330,7 @@
   .shows  > .show > .info > h1{
     width:95%;
     font-size:16px;
-    color:white;
+    color:#444;
     margin-top:2px;
     margin-bottom:0px;
     margin-left:2.5%;
@@ -339,7 +339,7 @@
     width:95%;
     font-size:12px;
     margin-top:3px;
-    color:white;
+    color:#444;
     margin-left:2.5%;
 
   }
@@ -379,7 +379,7 @@
       <div class="info">
         <h1>SLEEPING MOON CAFE</h1>
         <h2>July 19th, 2016</h2>
-        <a href="/somewhere" style="background-color:#F1DBD2;color:#444;">SOLD OUT</a>
+        <a href="/somewhere" style="background-color:#444;color:#444;">SOLD OUT</a>
       </div>
     </div>
   </div>
@@ -396,8 +396,8 @@
       <button ng-click="playPause()"
         title="Play/Pause"
         class="flex-none h2 mr2 button button-transparent button-grow rounded">
-        <svg ng-if="player.playing !== track.src" class="icon geomicon" data-icon="play" viewBox="0 0 32 32" width="32" height="32" style="fill:#F1DBD2"><path d="M4 4 L28 16 L4 28 z "></path></svg>
-        <svg ng-if="player.playing === track.src" class="icon geomicon" data-icon="pause" viewBox="0 0 32 32" width="32" height="32" style="fill:#F1DBD2"><path d="M4 4 H12 V28 H4 z M20 4 H28 V28 H20 z "></path></svg>
+        <svg ng-if="player.playing !== track.src" class="icon geomicon" data-icon="play" viewBox="0 0 32 32" width="32" height="32" style="fill:#444"><path d="M4 4 L28 16 L4 28 z "></path></svg>
+        <svg ng-if="player.playing === track.src" class="icon geomicon" data-icon="pause" viewBox="0 0 32 32" width="32" height="32" style="fill:#444"><path d="M4 4 H12 V28 H4 z M20 4 H28 V28 H20 z "></path></svg>
       </button>
       <div class="flex-auto">
         <progress
@@ -415,25 +415,25 @@
   <div class="p2">
     <div class="flex flex-center">
       <h4 class="m0 flex-auto" style="color:#2F2F58;">LATEST EP<span style="display:none;">{{playlist.user.username}}</span></h4>
-      <samp class="h6" style="color:#F1DBD2">{{ currentTime | hhmmss }} / {{ duration | hhmmss }}</samp>
+      <samp class="h6" style="color:#444">{{ currentTime | hhmmss }} / {{ duration | hhmmss }}</samp>
     </div>
-    <h3 class="h1 caps mt0" style="color:#F1DBD2">{{playlist.title}}</h3>
+    <h3 class="h1 caps mt0" style="color:#444">{{playlist.title}}</h3>
     <div class="flex flex-center">
       <button class="flex-none h3 button button-narrow button-transparent button-grow rounded"
         title="Play Previous Track"
         ng-click="previous()">
-        <svg class="icon geomicon" data-icon="previous" viewBox="0 0 32 32" style="fill:#F1DBD2"><path d="M4 4 H8 V14 L28 4 V28 L8 18 V28 H4 z "></path></svg>
+        <svg class="icon geomicon" data-icon="previous" viewBox="0 0 32 32" style="fill:#444"><path d="M4 4 H8 V14 L28 4 V28 L8 18 V28 H4 z "></path></svg>
       </button>
       <button class="flex-none h1 button button-transparent button-grow rounded"
         title="Play/Pause"
         ng-click="playPause(index)">
-        <svg ng-if="player.playing !== track.src" class="icon geomicon" data-icon="play" viewBox="0 0 32 32" width="32" height="32" style="fill:#F1DBD2"><path d="M4 4 L28 16 L4 28 z "></path></svg>
-        <svg ng-if="player.playing === track.src" class="icon geomicon" data-icon="pause" viewBox="0 0 32 32" width="32" height="32" style="fill:#F1DBD2"><path d="M4 4 H12 V28 H4 z M20 4 H28 V28 H20 z "></path></svg>
+        <svg ng-if="player.playing !== track.src" class="icon geomicon" data-icon="play" viewBox="0 0 32 32" width="32" height="32" style="fill:#444"><path d="M4 4 L28 16 L4 28 z "></path></svg>
+        <svg ng-if="player.playing === track.src" class="icon geomicon" data-icon="pause" viewBox="0 0 32 32" width="32" height="32" style="fill:#444"><path d="M4 4 H12 V28 H4 z M20 4 H28 V28 H20 z "></path></svg>
       </button>
       <button class="flex-none h3 button mr2 button-narrow button-transparent button-grow rounded"
         title="Play Next Track"
         ng-click="next()">
-        <svg class="icon geomicon" data-icon="next" viewBox="0 0 32 32" style="fill:#F1DBD2"><path d="M4 4 L24 14 V4 H28 V28 H24 V18 L4 28 z "></path></svg>
+        <svg class="icon geomicon" data-icon="next" viewBox="0 0 32 32" style="fill:#444"><path d="M4 4 L24 14 V4 H28 V28 H24 V18 L4 28 z "></path></svg>
       </button>
       <progress
         class="progress"
@@ -450,10 +450,10 @@
         title="Play {{track.title}}"
         ng-class="{'is-active': player.playing === track.src }"
         ng-click="playPause($index)">
-        <span class="flex-auto" style="color:#F1DBD2">
+        <span class="flex-auto" style="color:#444">
           {{track.user.username}} - {{track.title}}
         </span>
-        <span class="h6" style="color:#F1DBD2">
+        <span class="h6" style="color:#444">
           {{ track.duration / 1000 | hhmmss }}
         </span>
       </button>
